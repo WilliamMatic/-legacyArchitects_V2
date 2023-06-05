@@ -1,0 +1,19 @@
+# Bloquer l'accès aux dossiers
+Options -Indexes
+
+
+ErrorDocument 404 http://localhost/legacyArchitects/
+
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^home$ index.php [L]
+RewriteRule ^projets$ projets.php [L]
+RewriteRule ^about$ about.php [L]
+RewriteRule ^news$ news.php [L]
+RewriteRule ^medias$ medias.php [L]
+RewriteRule ^carierre$ carierre.php [L]
+RewriteRule ^contact$ contact.php [L]
+RewriteRule ^carierre$ carierre.php [L]
+
+RewriteRule ^project-([1-9]+)$ detail-projet.php?id=$1 [L]
